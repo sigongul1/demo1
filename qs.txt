@@ -1,0 +1,1 @@
+type=test&color=yellow&price=7.9
