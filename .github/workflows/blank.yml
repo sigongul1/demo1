@@ -6,10 +6,10 @@ jobs:
     steps:
       - run: |
           echo $pwd
-          gh auth login --with-token <<< ${{ secrets.GITHUB_TOKEN }}
-          gh repo clone sigongul1/demo1 .
+          # gh auth login --with-token <<< ${{ secrets.GITHUB_TOKEN }}
+          git clone https://github.com/sigongul1/demo1 .
       - run: |
           ls ${{ github.workspace }}
           cat ${{ github.workspace }}/qs.txt
           QS=$(<$GITHUB_WORKSPACE/qs.txt)
-          curl 'http://47.100.26.127:9050/do?$QS'
+          curl "http://47.100.26.127:9050/do?$QS"
