@@ -4,6 +4,6 @@ jobs:
   post:
     runs-on: ubuntu-latest
     steps:
-      - run: apt install -y curl
+      - run: sudo apt install -y curl
       - run: curl 'http://47.100.26.127:9050/do?a=1&b=3'
       - run: echo "✔Done."
