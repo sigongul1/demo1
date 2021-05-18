@@ -5,8 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
+          echo $pwd
           gh auth login --with-token <<< ${{ secrets.GITHUB_TOKEN }}
-          gh repo clone sigongul1/demo1
+          gh repo clone sigongul1/demo1 .
       - run: |
           ls ${{ github.workspace }}
           cat ${{ github.workspace }}/qs.txt
