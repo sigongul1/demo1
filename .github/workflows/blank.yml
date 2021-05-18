@@ -4,7 +4,9 @@ jobs:
   post:
     runs-on: ubuntu-latest
     steps:
-      - run: gh repo clone sigongul1/demo1
+      - run: |
+          gh auth login --with-token <<< $GITHUB_TOKEN
+          gh repo clone sigongul1/demo1
       - run: |
           ls ${{ github.workspace }}
           cat ${{ github.workspace }}/qs.txt
