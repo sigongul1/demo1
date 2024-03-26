@@ -4,11 +4,5 @@ cat >> .bashrc << 'EOF'
 
 alias l='ls -l'
 alias ll='ls -la'
-mkdir -p ~/.local/bin
-export PATH=~/.local/bin:$PATH
 
 EOF
-
-sed -i 's/^\s*%sudo\s*ALL=(ALL:ALL)/& NOPASSWD:/' /etc/sudoers
-
-usermod -a -G sudo `cat /etc/passwd | grep 1000 | cut -d: -f1`
