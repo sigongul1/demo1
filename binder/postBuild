@@ -1,0 +1,10 @@
+#!/bin/bash
+
+cat >> .bashrc << 'EOF'
+
+alias l='ls -l'
+alias ll='ls -la'
+mkdir -p ~/.local/bin
+export PATH=~/.local/bin:$PATH
+
+EOF
