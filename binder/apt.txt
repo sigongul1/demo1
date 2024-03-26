@@ -1,1 +1,3 @@
 podman
+uidmap
+slirp4netns
